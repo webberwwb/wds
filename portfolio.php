@@ -5,7 +5,7 @@ $projects_array = array(
 		"name" => "Project Manager",
 		"description" => "Complete Agile Development Project Management System",
 		"img" => "",
-		"link" => "http://github.com/websocity/project-manager"
+		"link" => "https://github.com/websociety/project-manager"
 	),
 );
 
