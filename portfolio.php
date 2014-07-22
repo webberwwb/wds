@@ -4,7 +4,11 @@ $projects_array = array(
 	array(
 		"name" => "Project Manager",
 		"description" => "Complete Agile Development Project Management System",
-		"img" => "",
+		"img" => array(
+			array("title" => "Login Page", "src" => "project-manager-login.png"),
+			array("title" => "New Project", "src" => "project-manager-new-project.png"),
+			array("title" => "Login Page", "src" => "project-manager-login.png")
+		),
 		"link" => "https://github.com/websociety/project-manager"
 	),
 );
@@ -13,10 +17,10 @@ $projects_array = array(
 
 <!DOCTYPE html>
 <html lang="en">
-	<? include('head.php') ?>
+	<?php include('head.php') ?>
 	<body>
-		<? $portfolio = true ?>
-		<? include('navbar.php') ?>
+		<?php $portfolio = true ?>
+		<?php include('navbar.php') ?>
 
 		<!-- Begin page content -->
 		<div class="container">
@@ -26,31 +30,42 @@ $projects_array = array(
 						<h1 class="text-center">Portfolio</h1>
 					</div>
 					<div class="lead">
-						<? if ( empty($projects_array) ): ?>
+						<?php if ( empty($projects_array) ): ?>
 							Coming soon.
-						<? else: ?>
-							<? foreach($projects_array as $project): ?>
+						<?php else: ?>
+							<?php foreach($projects_array as $project): ?>
 								<div class="row text-center">
 									<div class="col-xs-12">
-										<a href="<?= $project['link'] ?>">
-											<img src="images/<?= $project['img'] ?>" alt="<?= $project['name'] ?>" class="img-circle responsive-img col-xs-12 col-sm-4">
-										</a>
-										<br>
-										<h3 class="col-xs-12 col-sm-8">
-											<a href="<?= $project['link'] ?>"><?= $project['name'] ?></a>
-										</h3>
-										<p><?= $project['description'] ?></p>
+										<div class="row">
+											<?php for($i = 0; $i < 3; $i++): ?>
+												<a href="images/<?php echo $project['img'][$i]['src'] ?>" 
+													data-toggle="lightbox" 
+													data-gallery="<?php echo str_replace(" ","_",$project['name']) ?>"
+													data-title="<?php echo $project['img'][$i]['title'] ?>" 
+													class="thumbnail col-xs-4">
+													<img src="images/<?php echo $project['img'][$i]['src'] ?>" alt="<?php echo $project['img'][$i]['title'] ?>">
+												</a>
+											<?php endfor ?>
+										</div>
+										<div class="row">
+											<div class="col-xs-12">
+												<h3>
+													<a href="<?php echo $project['link'] ?>"><?php echo $project['name'] ?></a>
+												</h3>
+												<p><?php echo $project['description'] ?></p>	
+											</div>
+										</div>
 									</div>
 								</div>
 								<hr>
-							<? endforeach ?>
-						<? endif ?>
+							<?php endforeach ?>
+						<?php endif ?>
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<? include('footer.php') ?>
-		<? include('javascript.php') ?>
+		<?php include('footer.php') ?>
+		<?php include('javascript.php') ?>
 	</body>
 </html>

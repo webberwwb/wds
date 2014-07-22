@@ -13,10 +13,10 @@ $members_array = array(
 ?>
 <!DOCTYPE html>
 <html lang="en">
-	<? include('head.php') ?>
+	<?php include('head.php') ?>
 	<body>
-		<? $members = true ?>
-		<? include('navbar.php') ?>
+		<?php $members = true ?>
+		<?php include('navbar.php') ?>
 
 		<!-- Begin page content -->
 		<div class="container">
@@ -27,26 +27,26 @@ $members_array = array(
 					</div>
 				
 					<div class="lead">
-						<? foreach($members_array as $member): ?>
+						<?php foreach($members_array as $member): ?>
 							<div class="row">
 								<div class="col-xs-12">
-									<img src="images/<?= $member['img'] ?>" alt="<?= $member['name'] ?>" 
+									<img src="images/<?php echo $member['img'] ?>" alt="<?php echo $member['name'] ?>" 
 										class="img-circle responsive-img col-xs-12 col-sm-4">	
 									<br>
 									<h3 class="col-xs-12 col-sm-8 text-center">
-										<?= $member['name'] ?><br>
-										<small><?= $member['position'] ?></small>
+										<?php echo $member['name'] ?><br>
+										<small><?php echo $member['position'] ?></small>
 									</h3>
 								</div>
 							</div>
 							<hr>
-						<? endforeach ?>
+						<?php endforeach ?>
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<? include('footer.php') ?>
-		<? include('javascript.php') ?>
+		<?php include('footer.php') ?>
+		<?php include('javascript.php') ?>
 	</body>
 </html>

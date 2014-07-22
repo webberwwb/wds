@@ -1,7 +1,3 @@
-<?php 
-	function activeClass($toggle){ return $toggle?'class="active"':''; }
-	function active($toggle){ return $toggle?'active':''; }
- ?>
 <!-- Fixed navbar -->
 <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 	<div class="container">
@@ -16,11 +12,11 @@
 		</div>
 		<div class="collapse navbar-collapse">
 			<ul class="nav navbar-nav">
-				<li <?= activeClass($home) ?>><a href="index.php">Home</a></li>
-				<li <?= activeClass($about) ?>><a href="about.php">About</a></li>
-				<li <?= activeClass($portfolio) ?>><a href="portfolio.php">Portfolio</a></li>
-				<li <?= activeClass($members) ?>><a href="members.php">Members</a></li>
-				<li <?= activeClass($contact) ?>><a href="contact.php">Contact</a></li>
+				<li <?php if (isset($home)) echo 'class="active"'; ?>><a href="index.php">Home</a></li>
+				<li <?php if (isset($about)) echo 'class="active"'; ?>><a href="about.php">About</a></li>
+				<li <?php if (isset($portfolio)) echo 'class="active"'; ?>><a href="portfolio.php">Portfolio</a></li>
+				<li <?php if (isset($members)) echo 'class="active"'; ?>><a href="members.php">Members</a></li>
+				<li <?php if (isset($contact)) echo 'class="active"'; ?>><a href="contact.php">Contact</a></li>
 			</ul>
 		</div><!--/.nav-collapse -->
 	</div>

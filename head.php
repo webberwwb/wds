@@ -11,6 +11,8 @@
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 
 	<!-- Custom styles for this template -->
+	<link href="css/dark.css" rel="stylesheet">
+	<link href="css/ekko-lightbox.css" rel="stylesheet">
 	<link href="css/custom.css" rel="stylesheet">
 
 	<!-- Just for debugging purposes. Don't actually copy this line! -->

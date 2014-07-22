@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 <html lang="en">
-	<? include('head.php') ?>
+	<?php include('head.php') ?>
 	<body>
-		<? $about = true ?>
-		<? include('navbar.php') ?>
+		<?php $about = true ?>
+		<?php include('navbar.php') ?>
 
 		<!-- Begin page content -->
 		<div class="container">
@@ -27,7 +27,7 @@
 			</div>
 		</div>
 
-		<? include('footer.php') ?>
-		<? include('javascript.php') ?>
+		<?php include('footer.php') ?>
+		<?php include('javascript.php') ?>
 	</body>
 </html>

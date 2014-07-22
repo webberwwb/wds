@@ -1,4 +1,4 @@
-<?php 
+<?php
 // TODO:
 // Generate token and store into hidden file
 // Send token as part of the form
@@ -6,10 +6,10 @@
 
 <!DOCTYPE html>
 <html lang="en">
-	<? include('head.php') ?>
+	<?php include('head.php') ?>
 	<body>
-		<? $contact = true ?>
-		<? include('navbar.php') ?>
+		<?php $contact = true ?>
+		<?php include('navbar.php') ?>
 
 		<!-- Begin page content -->
 		<div class="container">
@@ -40,7 +40,7 @@
 			</div>
 		</div>
 
-		<? include('footer.php') ?>
-		<? include('javascript.php') ?>
+		<?php include('footer.php') ?>
+		<?php include('javascript.php') ?>
 	</body>
 </html>
