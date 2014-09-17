@@ -27,19 +27,20 @@ $members_array = array(
 					</div>
 				
 					<div class="lead">
-						<?php foreach($members_array as $member): ?>
+						<?php foreach(array_chunk($members_array,3) as $three_members): ?>
 							<div class="row">
-								<div class="col-xs-12">
+								<?php foreach ($three_members as $member): ?>
+									<div class="col-xs-12 col-md-4">
 									<img src="images/<?php echo $member['img'] ?>" alt="<?php echo $member['name'] ?>" 
-										class="img-circle responsive-img col-xs-12 col-sm-4">	
+										class="responsive-img col-xs-12">	
 									<br>
-									<h3 class="col-xs-12 col-sm-8 text-center">
+									<h3 class="col-xs-12 text-center">
 										<?php echo $member['name'] ?><br>
 										<small><?php echo $member['position'] ?></small>
 									</h3>
 								</div>
+								<?php endforeach ?>
 							</div>
-							<hr>
 						<?php endforeach ?>
 					</div>
 				</div>
